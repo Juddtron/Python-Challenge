@@ -1,7 +1,7 @@
 import csv
 
 # Files to load and output (Remember to change these)
-file_to_load = "budget_data.csv"
+file_to_load = "PyBank/Resourrces/budget_data.csv"
 file_to_output = "analysis/budget_analysis.txt"
 
 # Track various revenue parameters
@@ -51,3 +51,13 @@ results = (
 # Print the output (to terminal)
 print(results)
 
+output = open("output1.txt", "w")
+
+line1 = "Financial Analysis"
+line2 = "---------------------"
+line3 = str(f"Total Months: {str(total_months)}")
+line4 = str(f"Total: ${str(total_profit)}")
+line5 = str(f"Average Change: ${str(round(profit_loss_avg,2))}")
+line6 = str(f"Greatest Increase in Profits: {row} (${str(greatest_increase)})")
+line7 = str(f"Greatest Decrease in Profits: {row} (${str(greatest_decrease)})")
+output.write('{}\n{}\n{}\n{}\n{}\n{}\n{}\n'.format(line1,line2,line3,line4,line5,line6,line7))

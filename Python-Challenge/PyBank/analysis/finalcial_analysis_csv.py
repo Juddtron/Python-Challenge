@@ -1,7 +1,8 @@
+import os
 import csv
 
 # Files to load and output (Remember to change these)
-file_to_load = "budget_data.csv"
+file_to_load = "..\\Resourrces\budget_data.csv"
 file_to_output = "analysis/budget_analysis.txt"
 
 # Track various revenue parameters
@@ -50,3 +51,4 @@ results = (
 
 # Print the output (to terminal)
 print(results)
+
